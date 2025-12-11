@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CV Lập Trình Viên</title>
+
+    <!-- W3.CSS (vẫn dùng cho tiện lợi) -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- Google Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Local styles (chỉnh chuyên nghiệp, cân bằng, đối xứng) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-card">
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
+                href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i
+                    class="fa fa-bars"></i></a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+            <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
+            <a href="#tech" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CÔNG NGHỆ</a>
+            <a href="#education" class="w3-bar-item w3-button w3-padding-large w3-hide-small">HỌC VẤN</a>
+            <a href="#projects" class="w3-bar-item w3-button w3-padding-large w3-hide-small">DỰ ÁN</a>
+            <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">LIÊN HỆ</a>
+        </div>
+    </div>
+
+    <!-- Mobile nav -->
+    <div id="navDemo" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+        <a href="#about" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ABOUT</a>
+        <a href="#tech" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CÔNG NGHỆ</a>
+        <a href="#education" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">HỌC VẤN</a>
+        <a href="#projects" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">DỰ ÁN</a>
+        <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">LIÊN HỆ</a>
+    </div>
+
+    <!-- Hero -->
+    <div class="hero-bg">
+        <div class="page-wrapper center">
+            <h2>NGUYỄN VĂN A</h2>
+            <p class="muted"><i>FULL STACK DEVELOPER</i></p>
+            <div style="margin-top:18px;">
+                <a class="btn" href="#" title="Tải CV"><i class="fa fa-download"></i> Tải CV</a>
+                <a class="w3-button w3-white w3-round-large" href="#contact" style="margin-left:12px;">Liên hệ</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-wrapper">
+        <!-- About / Profile -->
+        <section id="about" class="section">
+            <div class="profile card">
+                <img src="https://www.w3schools.com/w3images/avatar_hat.jpg" alt="Avatar" class="profile-img avatar">
+                <div class="meta">
+                    <h3>Nguyễn Văn A</h3>
+                    <p class="muted">Full Stack Developer — 3 năm kinh nghiệm</p>
+                    <p>Tôi xây dựng ứng dụng web hiệu năng cao, tập trung trải nghiệm người dùng, và áp dụng best
+                        practices để vận hành bền vững.</p>
+                    <p><i class="fa fa-envelope"></i> email@example.com &nbsp; • &nbsp; <i class="fa fa-map-marker"></i>
+                        HCM, Việt Nam</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech / Skills -->
+        <section id="tech" class="section section--compact">
+            <h3 class="center">NGÔN NGỮ & CÔNG NGHỆ</h3>
+            <p class="center muted"><i>Bộ công cụ sử dụng hàng ngày</i></p>
+
+            <div class="skills-grid" style="margin-top:18px;">
+                <div class="card" style="flex:1; min-width:220px;">
+                    <strong>Frontend</strong>
+                    <div style="margin-top:12px;">
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">React</span>
+                    </div>
+                </div>
+
+                <div class="card" style="flex:1; min-width:220px;">
+                    <strong>Backend</strong>
+                    <div style="margin-top:12px;">
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Python / Django</span>
+                        <span class="skill-tag">Java Spring</span>
+                    </div>
+                </div>
+
+                <div class="card" style="flex:1; min-width:220px;">
+                    <strong>Tools & DB</strong>
+                    <div style="margin-top:12px;">
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Git</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section id="education" class="section">
+            <h3 class="center">HỌC VẤN</h3>
+            <div style="max-width:900px; margin:18px auto;">
+                <ul>
+                    <li>
+                        <div>
+                            <div>
+                                <div class="title">Đại học Công Nghệ</div>
+                                <div class="subtitle">Kỹ thuật phần mềm — GPA 3.6/4.0</div>
+                            </div>
+                            <div class="muted">2017 - 2021</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="section section--compact">
+            <h3 class="center">THÀNH TỰU & DỰ ÁN</h3>
+            <div class="projects-grid" style="margin-top:18px;">
+                <div class="project-card">
+                    <img src="https://www.w3schools.com/w3images/newyork.jpg" alt="E-commerce">
+                    <div class="body">
+                        <div>
+                            <h4>Website E-commerce</h4>
+                            <p class="muted">React • Node • Thanh toán tích hợp</p>
+                        </div>
+                        <div>
+                            <a class="btn" href="#">Xem Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="https://www.w3schools.com/w3images/paris.jpg" alt="Task App">
+                    <div class="body">
+                        <div>
+                            <h4>App Quản lý Công việc</h4>
+                            <p class="muted">Python Django • Hackathon — Giải nhì</p>
+                        </div>
+                        <div>
+                            <a class="btn" href="#">Xem Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="https://www.w3schools.com/w3images/sanfran.jpg" alt="Blog">
+                    <div class="body">
+                        <div>
+                            <h4>Blog Cá Nhân</h4>
+                            <p class="muted">SEO-friendly • Responsive</p>
+                        </div>
+                        <div>
+                            <a class="btn" href="#">Truy cập</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="section">
+            <h3 class="center">LIÊN HỆ</h3>
+            <div style="max-width:900px; margin:18px auto; display:grid; grid-template-columns:1fr 1fr; gap:18px;">
+                <div class="card">
+                    <p><i class="fa fa-map-marker"></i> HCM, Vietnam</p>
+                    <p><i class="fa fa-phone"></i> +84 123 456 789</p>
+                    <p><i class="fa fa-envelope"></i> mail@mail.com</p>
+                </div>
+                <div class="card">
+                    <form action="/action_page.php" target="_blank">
+                        <input class="w3-input w3-border" type="text" placeholder="Tên" required name="Name">
+                        <input class="w3-input w3-border" type="email" placeholder="Email" required name="Email"
+                            style="margin-top:8px;">
+                        <textarea class="w3-input w3-border" placeholder="Tin nhắn" required name="Message" rows="5"
+                            style="margin-top:8px;"></textarea>
+                        <div style="text-align:right; margin-top:10px;">
+                            <button class="btn" type="submit">GỬI</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="page-wrapper center">
+            <div style="font-size:20px; margin-bottom:8px;">
+                <i class="fa fa-facebook-official w3-hover-opacity"></i>
+                <i class="fa fa-instagram w3-hover-opacity"></i>
+                <i class="fa fa-github w3-hover-opacity"></i>
+                <i class="fa fa-linkedin w3-hover-opacity"></i>
+            </div>
+            <div class="muted">© 2025 Nguyễn Văn A — Thiết kế gọn, chuyên nghiệp</div>
+        </div>
+    </footer>
+
+    <script>
+        // mobile menu toggle (w3)
+        function myFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,416 @@
+/* --- Cấu hình chung --- */
+:root {
+  --primary-color: #0b3d91;
+  /* deep professional blue */
+  --accent-color: #06b6d4;
+  /* teal accent */
+  --bg-color: #f6f9ff;
+  /* very light blue background */
+  --card-bg: #ffffff;
+  --muted: #596673;
+  /* muted text */
+  --text: #0f1724;
+  /* main text */
+  --glass: rgba(255, 255, 255, 0.6);
+  --radius: 12px;
+  --gap: 20px;
+  --transition: 220ms ease;
+  --max-width: 1100px;
+}
+
+/* Font stack: Lato ưu tiên, fallback hệ thống */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Lato', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  margin: 0;
+  color: var(--text);
+}
+
+/* Layout container để cân bằng, căn giữa nội dung */
+.page-wrapper {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 48px 20px;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  background: linear-gradient(180deg, var(--bg-color) 0%, #eef6ff 100%);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar (subtle) */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(11, 61, 145, 0.18);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(11, 61, 145, 0.26);
+}
+
+/* Navbar: cố định, mờ nhẹ với khoảng cách hài hoà */
+.w3-top .w3-bar {
+  background-color: rgba(255, 255, 255, 0.92) !important;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 24px rgba(16, 23, 36, 0.06);
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(15, 23, 36, 0.04);
+}
+
+/* Navbar items: cân đối và có khoảng cách */
+.w3-bar-item {
+  font-weight: 600;
+  color: var(--text) !important;
+  padding: 10px 16px;
+  border-radius: 10px;
+  transition: transform var(--transition), color var(--transition), background var(--transition);
+}
+
+.w3-bar-item:hover {
+  color: #fff !important;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(11, 61, 145, 0.12);
+}
+
+/* Sections: thống nhất khoảng cách, lề giống nhau để cân xứng */
+.section {
+  padding: 64px 0;
+}
+
+.section--compact {
+  padding: 40px 0;
+}
+
+/* Hero: cân đối, nội dung giữa, kích thước chữ chuyên nghiệp */
+.hero-bg {
+  background: linear-gradient(180deg, rgba(11, 61, 145, 0.06), rgba(6, 182, 212, 0.02));
+  padding: 72px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-bg h2 {
+  font-size: clamp(28px, 4.5vw, 38px);
+  color: var(--primary-color);
+  margin: 0 0 8px;
+  letter-spacing: 0.6px;
+}
+
+.hero-bg p {
+  color: var(--muted);
+  margin: 0 0 18px;
+  font-size: 1.05rem;
+}
+
+.hero-bg .muted {
+  color: var(--muted);
+}
+
+/* CTA buttons used across site */
+.btn,
+.w3-button.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(90deg, var(--primary-color), #0b63ff);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: transform var(--transition), box-shadow var(--transition), filter var(--transition);
+  box-shadow: 0 10px 28px rgba(11, 61, 145, 0.12);
+}
+
+.btn:hover,
+.w3-button.btn:hover {
+  transform: translateY(-4px);
+  filter: saturate(1.05);
+  box-shadow: 0 18px 44px rgba(11, 61, 145, 0.14);
+}
+
+/* fallback for existing w3 buttons used in HTML */
+.w3-button.w3-white {
+  background: transparent !important;
+  color: var(--primary-color) !important;
+  border: 1px solid rgba(11, 61, 145, 0.08);
+}
+
+/* Profile / About: bố cục 2 cột cân đối */
+.profile {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: var(--gap);
+  align-items: center;
+}
+
+.profile-img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 6px solid var(--card-bg);
+  box-shadow: 0 8px 26px rgba(2, 6, 23, 0.06);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.profile-img.avatar {
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border: 6px solid var(--card-bg);
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.06);
+}
+
+.profile-img:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 44px rgba(2, 6, 23, 0.08);
+}
+
+/* Profile content: cân đối, khoảng cách hợp lý */
+.profile .meta {
+  padding: 8px 4px;
+}
+
+.profile .meta h3 {
+  margin: 0 0 6px;
+  font-size: 1.4rem;
+}
+
+.profile .meta p {
+  color: var(--muted);
+  margin: 0 0 8px;
+}
+
+/* Tech / Skills: dùng lưới, tag đều, kiểu code nhẹ */
+#tech {
+  background: transparent;
+  padding-top: 12px;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.skill-tag {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(250, 250, 250, 0.98));
+  color: var(--text);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Courier New", monospace;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(15, 23, 36, 0.05);
+  box-shadow: 0 6px 18px rgba(2, 6, 23, 0.03);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.skill-tag:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 34px rgba(2, 6, 23, 0.06);
+}
+
+/* Education list: card-like, symmetric spacing */
+#education ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#education ul li {
+  padding: 16px;
+  border-radius: var(--radius);
+  background: var(--card-bg);
+  margin-bottom: 12px;
+  box-shadow: 0 12px 30px rgba(2, 6, 23, 0.04);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#education .title {
+  font-weight: 700;
+  color: var(--text);
+}
+
+#education .subtitle {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* Projects: consistent cards, image aspect control */
+#projects {
+  padding: 40px 0;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap);
+}
+
+.project-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 14px 36px rgba(2, 6, 23, 0.05);
+  transition: transform var(--transition), box-shadow var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-card .body {
+  padding: 18px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-card h4 {
+  margin: 0 0 8px;
+}
+
+.project-card p {
+  color: var(--muted);
+  margin: 0 0 12px;
+}
+
+.project-card .btn {
+  margin-top: 12px;
+  background: transparent;
+  color: var(--primary-color);
+  border: 1px solid rgba(11, 61, 145, 0.12);
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 28px 64px rgba(2, 6, 23, 0.08);
+}
+
+/* Contact: form inputs đồng nhất */
+#contact form {
+  display: grid;
+  gap: 12px;
+  max-width: 700px;
+}
+
+#contact input,
+#contact textarea {
+  border: 1px solid rgba(15, 23, 36, 0.06);
+  padding: 12px;
+  border-radius: 8px;
+  background: #ffffff;
+  resize: vertical;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  outline: none;
+  box-shadow: 0 8px 26px rgba(11, 61, 145, 0.08);
+  border-color: var(--primary-color);
+}
+
+#contact .btn {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 10px;
+}
+
+/* Footer: đơn giản, đối xứng */
+footer {
+  padding: 28px 0;
+  text-align: center;
+  color: var(--muted);
+  border-top: 1px solid rgba(15, 23, 36, 0.03);
+  background: transparent;
+}
+
+/* Utility: center / card */
+.center {
+  text-align: center;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: 0 8px 30px rgba(2, 6, 23, 0.03);
+}
+
+/* Responsive: đảm bảo đối xứng trên màn hình nhỏ */
+@media (max-width: 900px) {
+  .profile {
+    grid-template-columns: 140px 1fr;
+    gap: 18px;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .page-wrapper {
+    padding: 36px 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .profile {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .profile-img {
+    margin: 0 auto;
+    width: 160px;
+    height: 160px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-bg {
+    padding: 56px 0;
+  }
+
+  .hero-bg h2 {
+    font-size: clamp(22px, 8vw, 28px);
+  }
+}
